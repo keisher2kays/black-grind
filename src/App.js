@@ -4,6 +4,8 @@ import Banner from './components/Banner.jsx'
 import About from './components/About.jsx'
 import Services from './components/Services.jsx'
 import Team from './components/Team.jsx'
+import Contact from './components/Contact.jsx'
+import Footer from './components/Footer.jsx'
 import './App.css'
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <About />
         <Services/>
         <Team/>
+        <Contact/>
+        <Footer/>
         {/* Why Choose Us, Philosophy, Services, Team, Contact, Footer land here next */}
       </main>
     </div>

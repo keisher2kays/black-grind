@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import teamPhoto from '../assets/man.png'
-// import staffPhoto from '../assets/about-staff.jpg'
 
 const VALUE_STRIP = [
   { label: 'Results Oriented' },
@@ -82,8 +81,8 @@ function About() {
 
           <p className="about__lead">
             We have the expertise and knowledge you need from a team of professionals
-            skilled in SEO, content, social media and analytics — to ensure a
-            well-rounded strategy across multiple channels. The digital space isn't
+            skilled in SEO, content, social media and analytics  to ensure a
+            well rounded strategy across multiple channels. The digital space isn't
             a platform for rehearsal, so we build compelling content that resonates
             with your audience across the board, and keep you ahead of shifting
             trends and technology.

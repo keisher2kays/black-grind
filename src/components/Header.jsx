@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from '../assets/logo.png'
 
 const LINKS = [
-   { href: '#home', label: 'Home' },
+  { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
   { href: '#team', label: 'Team' },
@@ -11,10 +11,20 @@ const LINKS = [
 
 function Header() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const closeMenu = () => setOpen(false)
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 40)
+    }
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <a href="#top" className="brand" onClick={closeMenu}>
         <img src={logo} alt="The Black Grind" className="brand__logo" />
       </a>
@@ -29,8 +39,7 @@ function Header() {
         </ul>
       </nav>
 
-      <div className="site-header__actions">
-        <a href="#contact" className="site-header__login">Log in</a>
+      <div>
         <a href="#contact" className="btn btn--cyan btn--sm">Get Access Now</a>
       </div>
 
