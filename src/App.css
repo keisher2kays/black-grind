@@ -1287,6 +1287,10 @@ button { font-family: inherit; }
 }
 
 @media (max-width: 640px) {
+.staff-card__avatar img {
+  object-fit: contain;
+}
+
   .team__intro {
     padding-top: 3rem;
   }

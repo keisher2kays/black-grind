@@ -2,6 +2,7 @@ import React from 'react'
 import man from '../assets/trust.jpeg'
 import paida from '../assets/paida.jpeg'
 import keisher from '../assets/keisher.jpg'
+import roy from '../assets/roy.jpeg'
 const STAFF = [
   {
     initials: 'TM',
@@ -22,7 +23,7 @@ const STAFF = [
     name: 'Roy Gocha',
     role: 'Digital Marketing Officer',
     bio: 'Experienced in social media management, content creation and marketing, alongside administrative operations that keep client campaigns running smoothly.',
-    photo: 'https://ui-avatars.com/api/?name=Roy+Gocha&background=17ade3&color=0c0c0e&size=256&font-size=0.36&bold=true',
+    photo: roy,
   },
   {
     initials: 'ES',
