@@ -942,10 +942,10 @@ button { font-family: inherit; }
     position: relative;
     left: 59px;
   width: 78%;
-  aspect-ratio: 4 / 5;
+  
 }
 .about__badge{
-  top: 3.5rem;
+  top: -0.5rem;
   left: -18.5px;
 }
 
