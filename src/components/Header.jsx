@@ -15,13 +15,17 @@ function Header() {
   const closeMenu = () => setOpen(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 40)
-    }
+    const handleScroll = () => setScrolled(window.scrollY > 40)
     window.addEventListener('scroll', handleScroll)
     handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Lock page scroll while the mobile drawer is open
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
 
   return (
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
@@ -31,15 +35,20 @@ function Header() {
 
       <nav className={`nav ${open ? 'nav--open' : ''}`} aria-label="Primary">
         <ul>
-          {LINKS.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} onClick={closeMenu}>{link.label}</a>
+          {LINKS.map((link, i) => (
+            <li key={link.href} style={{ transitionDelay: `${0.06 * i}s` }}>
+              <a href={link.href} onClick={closeMenu}>
+                <span className="nav__link-num">{String(i + 1).padStart(2, '0')}</span>
+                <span className="nav__link-text">{link.label}</span>
+              </a>
             </li>
           ))}
         </ul>
+
+        
       </nav>
 
-      <div>
+      <div >
         <a href="#contact" className="btn btn--cyan btn--sm">Get Access Now</a>
       </div>
 
@@ -53,6 +62,13 @@ function Header() {
         <span />
         <span />
       </button>
+
+      {/* Backdrop, click to close */}
+      <div
+        className={`nav-backdrop ${open ? 'is-visible' : ''}`}
+        onClick={closeMenu}
+        aria-hidden="true"
+      />
     </header>
   )
 }
