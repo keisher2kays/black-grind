@@ -36,7 +36,7 @@ function Banner() {
 
           <p className="hero__lead">
             SEO, content, social, brand and AI-ready web builds, run by one team
-            so your strategy pulls in the same direction &mdash; and turns visibility
+            so your strategy pulls in the same direction and turns visibility
             into revenue.
           </p>
 
