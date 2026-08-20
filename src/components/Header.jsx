@@ -49,7 +49,7 @@ function Header() {
       </nav>
 
       <div >
-        <a href="#contact" className="btn btn--cyan btn--sm">Get Access Now</a>
+        <a href="#contact" className="btn btn--cyan btn--sm">Start The Grind</a>
       </div>
 
       <button
