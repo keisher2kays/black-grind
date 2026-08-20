@@ -11,8 +11,8 @@ function Contact() {
         <div className="section__inner contact__banner-inner">
           <p className="eyebrow eyebrow--light">Contact Us</p>
           <h2 className="contact__banner-heading">
-            Let's Build Your <span className="text-cyan">Digital</span>{' '}
-            <span className="text-gold">Roadmap</span>
+            LET'S BUILD YOUR <span className="text-cyan">DIGITAL</span>{' '}
+            <span className="text-gold">ROADMAP</span>
           </h2>
           <p className="contact__banner-lead">
             The Black Grind is ready to bring the right strategy to your brand

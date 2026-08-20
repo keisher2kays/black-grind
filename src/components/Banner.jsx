@@ -1,5 +1,5 @@
 import React from 'react'
-import person from '../assets/heroman.png'
+import person from '../assets/trust3.png'
 import googleIcon from '../assets/google.png'
 import chatgptIcon from '../assets/gbt.png'
 // import perplexityIcon from '../assets/perp.png'

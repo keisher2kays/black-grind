@@ -92,8 +92,8 @@ function Services() {
         <div className="about__heading-wrap">
           <span className="about__heading-rule" />
           <h2 className="about__heading">
-            Strategy Built On <span className="text-cyan">Results</span>,
-            Not <span className="text-gold">Symbols</span>
+            STRATEGY BUILT ON <span className="text-cyan">RESULTS</span>,
+            NOT <span className="text-gold">SYMBOLS</span>
           </h2>
         </div>
         <p className="about__lead">

@@ -6,6 +6,7 @@ import Services from './components/Services.jsx'
 import Team from './components/Team.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import Philosophy from './components/Philosophy.jsx'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <main>
         <Banner />
         <About />
+        <Philosophy/>
         <Services/>
         <Team/>
         <Contact/>

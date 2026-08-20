@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
-import teamPhoto from '../assets/man.png'
+import teamPhoto from '../assets/roy2.png'
 
 const VALUE_STRIP = [
   { label: 'Results Oriented' },
@@ -75,7 +75,7 @@ function About() {
           <div className="about__heading-wrap">
             <span className="about__heading-rule" />
             <h2 className="about__heading">
-              We Chose <span className="text-cyan">YOU</span>, Now <span className="text-gold">Choose Us</span>
+              CHOOSE US<span className="text-cyan"></span>,WE <span className="text-gold">CHOOSE YOU</span>
             </h2>
           </div>
 
