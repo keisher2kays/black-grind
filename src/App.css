@@ -1,26 +1,20 @@
-/* =========================================================
-   THE BLACK GRIND — Design tokens
-   Palette pulled straight from the brand's own materials:
-   near-black ground, electric cyan + gold from the logo mark.
-   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@400;600;700;800&family=Caveat:wght@700&display=swap');
+
 :root {
   --ink: #0c0c0e;
   --ink-soft: #17171b;
   --ink-line: rgba(255, 255, 255, 0.1);
-
   --paper: #f7f4ee;
   --paper-soft: #efece4;
   --paper-line: rgba(12, 12, 14, 0.1);
-
   --cyan: #17ade3;
   --cyan-deep: #0c86b3;
   --gold: #f2a900;
   --gold-deep: #c98600;
-
   --ink-muted: rgba(247, 244, 238, 0.68);
   --paper-muted: #63626a;
 
-  --font-display: 'Archivo Black', 'Arial Black', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
   --font-script: 'Caveat', cursive;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
 

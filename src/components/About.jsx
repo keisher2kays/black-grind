@@ -75,7 +75,7 @@ function About() {
           <div className="about__heading-wrap">
             <span className="about__heading-rule" />
             <h2 className="about__heading">
-              CHOOSE US<span className="text-cyan"></span>,WE <span className="text-gold">CHOOSE YOU</span>
+              CHOOSE US<span className="text-cyan"></span>, <span className="text-gold">WE CHOOSE YOU</span>
             </h2>
           </div>
 
