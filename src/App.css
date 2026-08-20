@@ -331,7 +331,6 @@ button { font-family: inherit; }
   box-shadow: 0 12px 24px -14px rgba(23, 173, 227, 0.4);
 }
 
-
 .hero__chip--1 { top: 6%; left: 2%; }
 .hero__chip--2 { top: 14%; right: 0%; }
 .hero__chip--3 { bottom: 32%; left: -4%; }
@@ -354,12 +353,6 @@ button { font-family: inherit; }
   .hero__chip-icon { width: 18px; height: 18px; }
 }
 
-/* =========================================================
-   Header — floating pill segments (no full-width bar)
-   ========================================================= */
-/* =========================================================
-   Header — floating pill segments (no full-width bar)
-   ========================================================= */
 /* =========================================================
    Header — floating pill segments (no full-width bar)
    ========================================================= */
@@ -389,13 +382,14 @@ button { font-family: inherit; }
   box-shadow: 0 12px 30px -18px rgba(12, 12, 14, 0.6);
   backdrop-filter: blur(10px);
 }
+
 .brand {
   display: inline-flex;
   align-items: center;
   /* no background/border/radius — just the logo */
 }
 .brand__logo {
-  position :absolute;
+  position: absolute;
   height: 164px;
   width: auto;
   filter: brightness(0) invert(1);
@@ -443,14 +437,6 @@ button { font-family: inherit; }
   backdrop-filter: blur(10px);
 }
 
-.site-header__login {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--ink-muted);
-  transition: color 0.2s ease;
-}
-.site-header__login:hover { color: var(--paper); }
-
 .btn--sm {
   padding: 0.55rem 1.15rem;
   font-size: 0.83rem;
@@ -482,9 +468,27 @@ button { font-family: inherit; }
 .menu-toggle.is-open span:nth-child(2) { opacity: 0; }
 .menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 860px) {
+/* Only collapse to hamburger below tablet size — nav links stay visible on large screens */
+@media (max-width: 700px) {
   .menu-toggle { display: flex; }
   .site-header__actions { display: none; }
+
+  .site-header {
+    padding: 0.5rem 1rem;
+  }
+
+  .brand {
+    position: relative;
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
+
+  .brand__logo {
+    position: static;
+    height: 48px;
+    width: auto;
+  }
 
   .nav {
     position: fixed;
@@ -511,7 +515,6 @@ button { font-family: inherit; }
   }
   .nav a { font-size: 1.1rem; padding: 0.75rem 1rem; }
 }
-
 
 /* =========================================================
    About — image collage + value strip + mission/vision tabs
@@ -712,7 +715,6 @@ button { font-family: inherit; }
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* --- Philosophy strip --- */
 /* --- Philosophy strip: compact, animated on scroll --- */
 .about__philosophy {
   position: relative;
@@ -822,9 +824,18 @@ button { font-family: inherit; }
   .about__inner { grid-template-columns: 1fr; }
   .about__collage { padding: 1rem 0 3rem; }
   .about__lead, .about__tab-body { max-width: 100%; }
+  .about__img--main {
+    position: relative;
+    left: 37px;
+  width: 78%;
+  aspect-ratio: 4 / 5;
+}
+.about__badge{
+  top: 3.5rem;
+  left: -18.5px;
 }
 
-
+}
 
 /* =========================================================
    Services
@@ -1178,8 +1189,6 @@ button { font-family: inherit; }
   }
 }
 
-
-
 /* =========================================================
    Team
    ========================================================= */
@@ -1302,9 +1311,9 @@ button { font-family: inherit; }
 }
 
 @media (max-width: 640px) {
-.staff-card__avatar img {
-  object-fit: contain;
-}
+  .staff-card__avatar img {
+    object-fit: contain;
+  }
 
   .team__intro {
     padding-top: 3rem;
@@ -1324,8 +1333,6 @@ button { font-family: inherit; }
     padding: 1.5rem 1.25rem 1.75rem;
   }
 }
-
-
 
 /* =========================================================
    Contact
@@ -1525,8 +1532,7 @@ button { font-family: inherit; }
   content: '';
   position: absolute;
   inset: 0;
-  background:
-   white
+  background: white;
 }
 
 .contact__cartoon {
@@ -1573,7 +1579,6 @@ button { font-family: inherit; }
   }
 }
 
-
 /* =========================================================
    Footer
    ========================================================= */
@@ -1605,9 +1610,12 @@ button { font-family: inherit; }
 
 /* --- Brand column --- */
 .site-footer__logo {
-  height: 42px;
+  position: relative;
+  top: -70px;
+  height: 177px;
   width: auto;
-  margin-bottom: 1.1rem;
+  margin-bottom: -6.75rem;
+  filter: brightness(0) invert(1);
 }
 
 .site-footer__tagline {
@@ -1723,15 +1731,6 @@ button { font-family: inherit; }
 
 .site-footer__legal a:hover {
   color: var(--cyan);
-}
-.site-footer__logo {
-  position: relative;
-  top: -70px;
-
-    height: 177px;
-  width: auto;
-  margin-bottom: -6.75rem;
-  filter: brightness(0) invert(1);
 }
 
 /* =========================================================
