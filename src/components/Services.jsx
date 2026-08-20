@@ -30,12 +30,12 @@ const SERVICES = [
   {
     num: '06',
     title: 'Brand Visibility & Equity',
-    body: 'Your brand is everything. We build awareness and loyalty with a results-oriented approach — tracking metrics, ROI, and tangible impact at every step.',
+    body: 'Your brand is everything. We build awareness and loyalty with a results-oriented approach tracking metrics, ROI, and tangible impact at every step.',
   },
   {
     num: '07',
     title: 'Web Design & Development',
-    body: 'User-friendly, optimized, attractive websites — from 5 pages to full e-commerce builds — delivered in as little as 48 hours for basic sites, turning your site into a real marketing tool.',
+    body: 'User-friendly, optimized, attractive websites from 5 pages to full e-commerce builds delivered in as little as 48 hours for basic sites, turning your site into a real marketing tool.',
   },
   {
     num: '08',
@@ -97,7 +97,7 @@ function Services() {
           </h2>
         </div>
         <p className="about__lead">
-          It's not just content — it's a comprehensive strategy to build a digital
+          It's not just content it's a comprehensive strategy to build a digital
           roadmap that aligns marketing efforts with sales goals. Every service we
           offer is measured against one thing: tangible growth.
         </p>

@@ -46,7 +46,7 @@ function Team() {
           </h2>
         </div>
         <p className="about__lead">
-          Our lifeblood stream — a team of strategists, operators and builders
+          Our lifeblood stream a team of strategists, operators and builders
           working together to turn your brand's ambitions into measurable results.
         </p>
       </div>
