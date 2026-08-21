@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Manrope:wght@400;600;700;800&family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Manrope:wght@400;600;700;800&family=Caveat:wght@700&display=swap');
 
 :root {
   --ink: #0c0c0e;
@@ -14,13 +14,30 @@
   --ink-muted: rgba(247, 244, 238, 0.68);
   --paper-muted: #63626a;
 
-  --font-display: 'Space Grotesk', sans-serif;
+  --font-display: 'Montserrat', sans-serif;
   --font-script: 'Caveat', cursive;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
 
   --radius-sm: 6px;
   --radius-md: 14px;
   --container: 1180px;
+}
+
+/* MAKE ALL HEADINGS EXTRA BOLD */
+.hero__headline,
+.about__heading,
+.philosophy__heading,
+.contact__banner-heading,
+.services__intro .about__heading,
+.team__intro .about__heading,
+.staff-card__name,
+.service-row__title,
+.philosophy-card__title,
+.contact__card-title {
+  font-family: var(--font-display) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 
 /* =========================================================
