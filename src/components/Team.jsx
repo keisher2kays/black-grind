@@ -42,7 +42,7 @@ function Team() {
         <div className="about__heading-wrap">
           <span className="about__heading-rule" />
           <h2 className="about__heading">
-            THE PEOPLE BEHIND THE <span className="text-cyan">GRIND</span>
+            THE PEOPLE BEHIND THE <span className="text-cyan">BLACK GRIND</span>
           </h2>
         </div>
         <p className="about__lead">

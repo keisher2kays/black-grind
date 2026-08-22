@@ -1894,16 +1894,53 @@ button { font-family: inherit; }
   color: var(--ink);
 }
 
-.philosophy__inner {
+/* --- Intro: image + copy --- */
+.philosophy__intro {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 0.85fr 1.15fr;
   gap: clamp(2.5rem, 5vw, 4.5rem);
   align-items: center;
   padding-top: clamp(4rem, 8vw, 6rem);
-  padding-bottom: clamp(4rem, 8vw, 6rem);
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
 }
 
-/* --- Left copy --- */
+.philosophy__visual {
+  position: relative;
+}
+
+.philosophy__collage {
+  position: relative;
+  padding: 1rem 2.5rem 2.5rem 0;
+}
+
+.philosophy__img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.philosophy__badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1rem 1.4rem;
+  border-radius: 18px 4px 18px 18px;
+  box-shadow: 0 14px 30px -14px rgba(12, 12, 14, 0.5);
+}
+.philosophy__badge span {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+}
+.philosophy__badge span:nth-child(1) { color: var(--cyan); }
+.philosophy__badge span:nth-child(2) { color: var(--paper); }
+.philosophy__badge span:nth-child(3) { color: var(--gold); }
+
 .philosophy__pill {
   display: inline-block;
   padding: 0.4rem 1rem;
@@ -1929,19 +1966,21 @@ button { font-family: inherit; }
   color: var(--paper-muted);
   font-size: 0.98rem;
   line-height: 1.7;
-  margin: 0 0 2rem;
-  max-width: 440px;
+  margin: 0 0 1.25rem;
+  max-width: 560px;
 }
 
 .philosophy__cta {
   display: inline-flex;
+  margin-top: 0.5rem;
 }
 
-/* --- Right grid --- */
+/* --- 2x2 grid --- */
 .philosophy__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
+  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
 }
 
 .philosophy-card {
@@ -1990,7 +2029,6 @@ button { font-family: inherit; }
   margin: 0;
 }
 
-/* --- Highlighted card, solid cyan fill --- */
 .philosophy-card--highlight {
   background: var(--cyan);
   border-color: var(--cyan);
@@ -2010,12 +2048,128 @@ button { font-family: inherit; }
   color: rgba(12, 12, 14, 0.72);
 }
 
+/* --- Biscuit Tin closing quote --- */
+.philosophy__quote {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.philosophy__quote::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(45% 70% at 12% 20%, rgba(23, 173, 227, 0.16), transparent 70%),
+    radial-gradient(35% 60% at 88% 85%, rgba(242, 169, 0, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.philosophy__quote-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 4.5rem) 1.5rem;
+}
+
+.philosophy__quote-mark {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--cyan);
+  opacity: 0;
+  margin-bottom: -0.5rem;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.05s, transform 0.6s ease 0.05s;
+}
+
+.philosophy__quote-eyebrow {
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+  margin: 0 0 0.5rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.15s, transform 0.6s ease 0.15s;
+}
+
+.philosophy__quote-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.35;
+  max-width: 560px;
+  margin: 0 auto 1rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.25s, transform 0.6s ease 0.25s;
+}
+
+.philosophy__quote-divider {
+  display: inline-block;
+  width: 36px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.35s, transform 0.6s ease 0.35s;
+}
+
+.philosophy__quote-sub {
+  color: var(--ink-muted);
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.45s, transform 0.6s ease 0.45s;
+}
+
+.philosophy__quote-signature {
+  font-family: var(--font-script);
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin: 1.5rem 0 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease 0.55s, transform 0.6s ease 0.55s;
+}
+
+.philosophy__quote.is-visible .philosophy__quote-mark,
+.philosophy__quote.is-visible .philosophy__quote-eyebrow,
+.philosophy__quote.is-visible .philosophy__quote-text,
+.philosophy__quote.is-visible .philosophy__quote-divider,
+.philosophy__quote.is-visible .philosophy__quote-sub,
+.philosophy__quote.is-visible .philosophy__quote-signature {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .philosophy__quote-mark,
+  .philosophy__quote-eyebrow,
+  .philosophy__quote-text,
+  .philosophy__quote-divider,
+  .philosophy__quote-sub,
+  .philosophy__quote-signature {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* =========================================================
    Philosophy — Responsiveness
    ========================================================= */
 @media (max-width: 900px) {
-  .philosophy__inner {
+  .philosophy__intro {
     grid-template-columns: 1fr;
+  }
+  .philosophy__collage {
+    padding: 1rem 0 3rem;
   }
   .philosophy__lead {
     max-width: 100%;
