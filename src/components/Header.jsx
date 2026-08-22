@@ -4,9 +4,11 @@ import logo from '../assets/logo.png'
 const LINKS = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
+  { href: '#philosophy', label: 'Philosophy' },
   { href: '#services', label: 'Services' },
   { href: '#team', label: 'Team' },
   { href: '#contact', label: 'Contact' },
+  
 ]
 
 function Header() {

@@ -70,11 +70,11 @@ function Philosophy() {
         <div className="philosophy__visual">
           <div className="philosophy__collage">
             <img src={philosophyPhoto} alt="The Black Grind philosophy" className="philosophy__img" />
-            <div className="philosophy__badge">
+            {/* <div className="philosophy__badge">
               <span>Quick</span>
               <span>Easy</span>
               <span>Efficient</span>
-            </div>
+            </div> */}
           </div>
         </div>
 
